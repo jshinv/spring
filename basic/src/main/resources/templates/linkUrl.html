@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>linkUrl</title>
+</head>
+<body>
+	<th:block th:each="page: ${#numbers.sequence(start, end)}">
+		<span th:if="${now_page == page}" th:text="${page}"></span>
+		<a href="#" th:unless="${now_page == page}" th:text="${page}"></a>
+	</th:block>
+</body>
+</html>
