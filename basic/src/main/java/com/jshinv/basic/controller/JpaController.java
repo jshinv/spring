@@ -16,7 +16,19 @@ import com.jshinv.basic.repository.ProductRepository;
 public class JpaController {
 	@Autowired
 	ProductRepository productRepository;
+	
+//	@GetMapping("/jpa/product2")
+//	public Product product2(String name) {
+//		Product list = productRepository.findByName(name);
+//		return list;
+//	}
 
+	@GetMapping("/jpa/product3")
+	public List<Product> product3(String name) {
+		List<Product> list = productRepository.findByName(name);
+		return list;
+	}
+	
 	@GetMapping("/jpa/product")
 	public List<Product> product() {
 		List<Product> list = productRepository.findAll();
